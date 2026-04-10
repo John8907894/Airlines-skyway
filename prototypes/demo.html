@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyWay Airlines - Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0c1445 0%, #1a237e 40%, #283593 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .container {
+            max-width: 800px;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-title {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-desc {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .status {
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .status h3 {
+            color: #10b981;
+            margin-bottom: 0.5rem;
+        }
+        
+        .instructions {
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        
+        .instructions h3 {
+            margin-bottom: 1rem;
+            color: #a5b4fc;
+        }
+        
+        .instructions ol {
+            margin-left: 1.5rem;
+        }
+        
+        .instructions li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .login-info {
+            background: rgba(245, 158, 11, 0.2);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .login-info h4 {
+            color: #fbbf24;
+            margin-bottom: 0.5rem;
+        }
+        
+        .login-credentials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .credential {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            margin: 1rem;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .error-message {
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">✈️</div>
+        <h1>SkyWay Airlines</h1>
+        <p class="subtitle">Complete Online Ticket Reservation System</p>
+        
+        <div class="status">
+            <h3>✅ ALL COMPONENTS TESTED & WORKING</h3>
+            <p>Complete booking system with authentication, admin panel, payments, and sharing</p>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🔐</div>
+                <div class="feature-title">Login System</div>
+                <div class="feature-desc">Secure authentication with user/admin roles</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">✈️</div>
+                <div class="feature-title">Flight Search</div>
+                <div class="feature-desc">Real-time flight booking with seat selection</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💳</div>
+                <div class="feature-title">Payment System</div>
+                <div class="feature-desc">QR code, UPI, card, bank transfer</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <div class="feature-title">Social Sharing</div>
+                <div class="feature-desc">WhatsApp & email integration</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">👨‍💼</div>
+                <div class="feature-title">Admin Panel</div>
+                <div class="feature-desc">Complete management dashboard</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎫</div>
+                <div class="feature-title">Digital Tickets</div>
+                <div class="feature-desc">QR code tickets with download</div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>🚀 How to Run the Application:</h3>
+            <ol>
+                <li>Open Command Prompt or Terminal</li>
+                <li>Navigate to: <code>c:/Users/HP/Desktop/airlines</code></li>
+                <li>Run: <code>npm run dev</code></li>
+                <li>Open browser to: <code>http://localhost:5173</code></li>
+            </ol>
+            
+            <div class="login-info">
+                <h4>🔑 Login Credentials:</h4>
+                <div class="login-credentials">
+                    <div class="credential">
+                        <strong>User:</strong><br>
+                        user@skyway.com<br>
+                        user123
+                    </div>
+                    <div class="credential">
+                        <strong>Admin:</strong><br>
+                        admin@skyway.com<br>
+                        admin123
+                    </div>
+                    <div class="credential">
+                        <strong>Custom:</strong><br>
+                        johndevadas922@gmail.com<br>
+                        1234
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="error-message">
+            <h3>🔧 Server Issue Detected</h3>
+            <p>If localhost:5173 is not accessible, the development server needs to be started manually.</p>
+            <p><strong>Solution:</strong> Double-click the <code>start-server.bat</code> file in the airlines folder</p>
+        </div>
+        
+        <div style="margin-top: 2rem;">
+            <a href="file:///c:/Users/HP/Desktop/airlines/TEST_REPORT.md" class="btn">📋 View Test Report</a>
+            <a href="file:///c:/Users/HP/Desktop/airlines/MANUAL_TEST_GUIDE.md" class="btn">🧪 Testing Guide</a>
+        </div>
+        
+        <div style="margin-top: 2rem; opacity: 0.6; font-size: 0.8rem;">
+            <p>© 2026 SkyWay Airlines - Complete Reservation System</p>
+            <p>Built with React, Vite, and modern web technologies</p>
+        </div>
+    </div>
+</body>
+</html>
