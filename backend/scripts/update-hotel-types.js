@@ -22,7 +22,7 @@ const STATIC_HOTELS = [
 
 async function updateHotelTypes() {
   try {
-    await mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log('Connected to DB');
 
     for (const h of STATIC_HOTELS) {
